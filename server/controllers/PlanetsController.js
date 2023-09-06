@@ -43,7 +43,7 @@ export class PlanetsController extends BaseController {
     async editPlanet(request, response, next) {
         try {
             const updates = request.body
-            const planetId = request.params.id
+            const planetId = request.params.planetId
             const editedPlanet = await planetsService.editPlanet(planetId, updates)
             response.send(editedPlanet)
         } catch (error) {
